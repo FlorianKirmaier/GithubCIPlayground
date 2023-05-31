@@ -1,6 +1,8 @@
 name: CITEST
 
-on: [repository_dispatch]
+on:
+  repository_dispatch:
+    types: [test_result]
 
 jobs:
   builds:
