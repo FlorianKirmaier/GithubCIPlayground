@@ -1,9 +1,12 @@
 name: Release build
 
 on:
-  release:
-    types:
-      - created
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build Type'
+        required: true
+        default: 'CI'
 
 jobs:
   release:
