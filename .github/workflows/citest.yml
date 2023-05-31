@@ -1,7 +1,12 @@
 name: CITEST
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build Type'
+        required: true
+        default: 'CI'
 
 jobs:
   builds:
